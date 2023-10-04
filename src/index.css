@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Karla', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.active-slide {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  opacity: 1;
+  animation-name: enter;
+  animation-duration: 1s;
+}
+
+.slide {
+  display: none;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    top: 50px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+.button {
+  padding: 5px 25px;
+  color: #FFF;
+  outline: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  outline-offset: 5px;
+  padding: 5px 10px;
+  transition: all 0.3s ease-out;
+}
+
+.button:hover {
+  outline: 1px solid rgba(255, 255, 255, 1);
+  outline-offset: 2px;
+}
+
+.float {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 5px); }
+  100%   { transform: translate(0, -0px); }  
+}
+
+.nav-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.nav-close {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
