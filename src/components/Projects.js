@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import StudyTrackerDetails from './StudyTrackerDetails';
 import { BsArrowDownShort } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
 
@@ -102,15 +101,6 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className={currentId === "study-tracker" ? "flex flex-col absolute bottom-8 float" : "hidden"}>
-          <div onClick={scroll} className="font-mono text-white text-sm hover:cursor-pointer flex flex-col items-center">
-            Learn More
-            <BsArrowDownShort />
-          </div>
-        </div>
-      </div>
-      <div ref={ref} className={currentId === "study-tracker" ? "bg-white" : "hidden"}>
-        <StudyTrackerDetails />
       </div>
     </div>
   )
